@@ -1,0 +1,198 @@
+@import "reset";
+
+// ***** Variables ***** 
+
+// **** Primary Color *****
+$blue: hsl(223, 87%, 63%);
+
+// **** Secondary Color *****
+$pale-blue: hsl(223, 100%, 88%);
+$light-red: hsl(354, 100%, 66%);
+
+// **** Neutral Color *****
+$gray: hsl(0, 0%, 59%);
+$dk-blue: hsl(209, 33%, 12%);
+
+// Font reset to 10px in order to work easier with rem units
+html {
+  font-size: 62.5%;
+}
+
+// Body styling and revert to 20px = 2rem
+
+body {
+ font-family: 'Libre Franklin', sans-serif;
+ font-size: 2rem;
+ min-height: 100vh;
+ color: $dk-blue;
+ display: grid;
+ place-items: center;
+ 
+}
+
+.container {
+  max-width:375px;
+  height: 100%;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ padding: 10rem 3rem 4rem 3rem;
+
+ @media (min-width: 900px) {
+   max-width: 1200px;
+ }
+ 
+}
+
+.logo {
+  margin-bottom: 4rem;
+}
+
+.attn {
+  margin-bottom: 1.1rem;
+  font-weight: 300;
+  font-size: 2.5rem;
+  text-align: center;
+  color: $gray;
+
+  @media (min-width: 900px) {
+    font-size: 4rem;
+  }
+
+  strong {
+    color:$dk-blue;
+  }
+  
+}
+
+.subscribe {
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+  filter: blur(0.3px);
+  margin-bottom: 2.5rem;
+}
+
+.form {
+  margin-bottom: 6rem;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 900px) {
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    
+  }
+
+  input {
+    border: 1px solid $pale-blue;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+    width: 100%;
+
+    @media (min-width: 900px) {
+      margin-bottom: unset;
+    }
+
+    
+    &:focus {
+      outline: none;
+    } 
+
+    &::placeholder {
+      font-size: 1.1rem;
+      padding:.5rem 0 1rem 1.5rem; 
+      text-indent: 1rem;
+      color: $pale-blue; 
+    }
+
+    &[type=email]{
+      padding-bottom: .5rem;
+    }  
+  }
+
+  .btn {
+    border: none;
+    background-color: $blue;
+    border-radius: 2rem;
+    padding: 1rem;
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 2px 3px 2px $pale-blue;
+
+    @media (min-width: 900px) {
+      width: 60%;
+      margin-left: 2rem;
+    }
+
+    &:hover {
+      box-shadow: none;
+      transform: translateY(2px);
+    }
+  }
+}
+
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-block {
+ margin: 8rem auto 2rem;
+
+ ul {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   list-style: none;
+
+   li {
+     margin-right: 3rem;
+   }
+   
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
+
+   svg:hover {
+     background: $blue;
+     border-radius: 50%;
+     fill: #fff;  
+   }
+
+  //  li:not(:nth-of-type(3)){
+  //    margin-right: 3rem;
+  //  }
+ }
+}
+
+.copyright {
+  margin: 2rem auto;
+  text-align: center;
+  font-size: 1.2rem;
+  color:$gray;
+  
+}
+
+.attribution {
+  margin: 5rem 0 0 0;
+  font-size: 2rem;
+  color: $gray;
+}
+
+
+@media (min-width: 900px) {
+  .image {
+    max-width: 500px;
+  }
+}
