@@ -185,7 +185,7 @@ body {
 }
 
 .form input:focus {
-  outline: none;
+  border: none;
 }
 
 .form input::-webkit-input-placeholder {
@@ -283,18 +283,39 @@ footer {
 }
 
 .social-block ul li {
-  margin-right: 3rem;
+  margin-right: 4rem;
+}
+
+.social-block ul a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 2s ease-out;
+  transition: all 2s ease-out;
+}
+
+.social-block ul a:hover, .social-block ul a:focus {
+  background-color: #4f7df3;
+  border-radius: 50%;
 }
 
 .social-block ul svg {
-  width: 2rem;
-  height: 2rem;
+  display: block;
+  width: 20px;
+  height: 20px;
 }
 
 .social-block ul svg:hover {
-  background: #4f7df3;
-  border-radius: 50%;
-  fill: #fff;
+  stroke: #fff;
 }
 
 .copyright {

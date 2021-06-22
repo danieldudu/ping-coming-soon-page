@@ -98,7 +98,7 @@ body {
 
     
     &:focus {
-      outline: none;
+      border: none;
     } 
 
     &::placeholder {
@@ -156,22 +156,52 @@ footer {
    list-style: none;
 
    li {
-     margin-right: 3rem;
+     margin-right: 4rem;
    }
-   
-  svg {
-    width: 2rem;
-    height: 2rem;
-  }
 
-   svg:hover {
-     background: $blue;
-     border-radius: 50%;
-     fill: #fff;  
+   a {
+     display: block;
+     width: 30px;
+     height: 30px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     transition: all 2s ease-out;
+
+     &:hover, 
+     &:focus {
+      background-color: $blue;
+      border-radius: 50%;
+     }
    }
+
+   svg {
+     display: block;
+     width: 20px; 
+     height: 20px;
+
+     &:hover {
+      
+       
+     stroke: #fff;
+       
+     }
+   }
+
+   
+   
+  
+
+  
+
+  //  svg:hover {
+  //  order-radius: 50%;
+  //    fill: #fff;  
+  //  }
 
   //  li:not(:nth-of-type(3)){
-  //    margin-right: 3rem;
+  //    margin-r  background: $blue;
+  //    bight: 3rem;
   //  }
  }
 }
